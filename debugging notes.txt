@@ -4,23 +4,31 @@ basics
  - breakpoint: stop, pause, take a look at whats going on (ex: line 25)
 	- conditional breakpoints: only breaks when certain condition is met (ex: i > 5)
 	- logpoints: if breakpoint is hit, log something into the output
- - panes
-	- shows variables in current scope
-	- watch: shows current values based on expression (ex: nums[:5] will show first 5 numbers in watch pane) (ex: 7 < 5, will be evaluated after every step)
-	- call stack: monitors the stack, key to where stepping out will take you
-	- breakpoints store in pane on the bottom (check and uncheck to activate and deactivate (comment out the breakpoint))
- - commands in menu bar:
- 	- step over: move point to the next line 1 by 1 (IN ORDER TO STEP INTO FUNCTIONS, YOU MUST STEP IN OR ELSE IT WILL HAPPEN AUTOMATICALLY)
- 	- step into: take 1 step in to scope, bring you into the function on that line (global -> function) (will just go to next line if no method)
- 	- step out of: take 1 step back in scope, looks for last return statement (function -> global)
- 	- continue: goes to next breakpoint
-	- you can step back by doing crtl + shift + p, debug: jump to cursor (DOES NOT REVERT VARS)
+
+panes
+ - shows variables in current scope
+ - watch: shows current values based on expression (ex: nums[:5] will show first 5 numbers in watch pane) (ex: 7 < 5, will be evaluated after every step)
+ - call stack: monitors the stack, key to where stepping out will take you
+ - breakpoints store in pane on the bottom (check and uncheck to activate and deactivate (comment out the breakpoint))
+
+commands in menu bar
+ - step over: move point to the next line 1 by 1 (IN ORDER TO STEP INTO FUNCTIONS, YOU MUST STEP IN OR ELSE IT WILL HAPPEN AUTOMATICALLY)
+ - step into: take 1 step in to scope, bring you into the function on that line (global -> function) (will just go to next line if no method)
+ - step out of: take 1 step back in scope, looks for last return statement (function -> global)
+ - continue: goes to next breakpoint
+ - you can step back by doing crtl + shift + p, debug: jump to cursor (DOES NOT REVERT VARS)
+
+other
  - debugger doesnt stop unless theres a breakpoint, needed to debug
  - highlight variables: see their values
  - launch vs attach: Launch: start app + debugger. Attach: start debugger (good for scripts), attach to process(good for websites)
  - REPL: read, evaluate, print, loop in debug console (allows for basic commands)
  - how to react: create config with web app (msedge), npm start, start debugger
- - valgrind
-	- complie using gcc test.c -g for debug info
-	- run valgrind --leak-check=yes ./a.out
-	- gives a summary of memory leaks and out of bounds errors
+
+valgrind
+ - complie using gcc test.c -g for debug info
+ - run valgrind --leak-check=yes ./a.out
+ - gives a summary of memory leaks and out of bounds errors
+
+link to slides: https://www.canva.com/design/DAFh45WxSKU/1o--PRjzkipNTMfW1SucuA/edit?utm_content=DAFh45WxSKU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+

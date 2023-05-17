@@ -7,11 +7,11 @@ console.log(b);
 function sumNums() {
     let count = 0;
     for (let i = 0; i <= arr.length; i++) {
-        //FIXME: i < arr.length
+        //! i < arr.length
         count += arr[i];
     }
 
-    //FIXME: return count
+    //! return count
 }
 
 function fibonacci(count) {
@@ -23,7 +23,7 @@ function fibonacci(count) {
         temp = a;
         a = a + b;
         b = temp;
-        temp--; //FIXME: count--
+        temp--; //! count--
     }
     return b;
 }
